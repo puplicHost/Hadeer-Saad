@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadeer Saad - Interior &amp; Landscape Designer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary-color: #8208be;
+            --secondary-color: #8208be;
+            --accent-color: #8208be;
+            --dark-color: #420460;
+            --light-color: #8208be;
+            --text-color:#fff;
+            --card-bg: #14021d;  
+            --border-color: #fff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--dark-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--nav-bg);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links i {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+        }
+
+        .nav-links a:hover i {
+            transform: translateY(-2px);
+            transition: transform 0.3s ease;
+        }
+
+        /* Favicon styles */
+        .favicon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        /* Header Section */
+        header {
+            background: var(--nav-bg);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            margin-bottom: 20px;
+            border: 5px solid white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-img-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .profile-img-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .profile-img-container:hover::before {
+            opacity: 1;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px #fff;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .cta-btn {
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .primary-btn {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+        }
+
+        .secondary-btn {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .primary-btn:hover {
+          background-color:  var(--text-color);
+            color: var(--accent-color);
+        }
+
+        .secondary-btn:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        /* About Section */
+        .section {
+            padding: 100px 0;
+            background-color: var(--dark-color);
+        }
+
+        .section:nth-child(even) {
+            background-color: var(--light-color);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+    
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--text-color);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+.services-section {
+  padding: 80px 10%;
+  background: var(--dark-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  position: relative;
+  color: var(--light-color);
+  letter-spacing: 1px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.service-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(130, 8, 190, 0.2), rgba(255, 255, 255, 0.05));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 20px;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 20px rgba(130, 8, 190, 0.6);
+}
+
+.service-card i {
+  font-size: 2.2rem;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: var(--light-color);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #d3cde1;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.service-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.service-card ul li {
+  margin: 8px 0;
+  color: #b9aee3;
+  position: relative;
+  padding-left: 22px;
+  transition: color 0.3s ease;
+}
+
+.service-card ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-size: 1.1rem;
+}
+
+.service-card ul li:hover {
+  color: #fff;
+}
+
+
+
+/* Responsive */
+@media (max-width:640px){.container{margin:16px;padding:16px}}
+ 
+/* courses */
+
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.section-header h2 {
+    font-size: 28px;
+    color: var(--text-color);
+}
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+.course-card {
+    background: transparent;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px solid #fff;
+}
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.15);
+}
+.course-card h3 {
+    font-size: 18px;
+    color: #ffff;
+    margin-bottom: 8px;
+}
+.course-card p {
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.6;
+}
+
+
+
+
+/* small utility */
+.muted{color:var(--muted);font-size:13px}
+
+        .stat-item {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            color: var(--text-color);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-category {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .skill-category h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            color: var(--text-color);
+        }
+
+        .skill-category h3 i {
+            font-size: 1.4rem;
+        }
+
+        .skill-item {
+            margin-bottom: 15px;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background-color: var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+
+        .skill-list,
+        .experience-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 10px;
+            color: var(--text-color);
+        }
+
+        .skill-list li,
+        .experience-list li {
+            line-height: 1.6;
+        }
+
+        /* Experience */
+        #experience .about-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .experience-list {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        .experience-list li {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 14px 16px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .experience-list li::before {
+            content: "★";
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .experience-count {
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-right: 6px;
+            white-space: nowrap;
+        }
+
+        /* Certificates Section */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .certificate-item {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .certificate-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .certificate-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+
+        .certificate-item:hover .certificate-overlay {
+            opacity: 1;
+        }
+
+        .certificate-overlay i {
+            color: white;
+            font-size: 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        .certificate-img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            object-position: center;
+            background-color: var(--light-color);
+            transition: transform 0.3s ease;
+        }
+
+        .certificate-item:hover .certificate-img {
+            transform: scale(1.1);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image-container {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 12vw;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-title i {
+            color: var(--accent-color);
+        }
+
+        .project-description {
+            color: var(--text-color);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .project-tag {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-tag:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+
+        .project-link:hover {
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+
+        .project-link i {
+            font-size: 1.1rem;
+        }
+
+        /* Copies Section */
+        .copies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .copy-item {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .copy-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .copy-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+
+        .copy-item:hover .copy-overlay {
+            opacity: 1;
+        }
+
+        .copy-overlay i {
+            color: white;
+            font-size: 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .copy-img {
+            width: 100%;
+            height: 320px;
+            object-fit: contain;
+            object-position: center;
+            background-color: var(--light-color);
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .copy-item:hover .copy-img {
+            transform: scale(1.1);
+        }
+
+.section.pdfs .pdfs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 20px 0;
+  text-align: center;
+  background-color: var(--dark-color);
+}
+
+.section.pdfs .pdf-item {
+  background-color: var(--dark-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.section.pdfs .pdf-item:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 25px rgba(130, 8, 190, 0.4);
+}
+
+.section.pdfs .pdf-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.section.pdfs .pdf-item:hover img {
+  transform: scale(1.03);
+  border-color: var(--accent-color);
+}
+
+.section.pdfs .pdf-link {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.section.pdfs .pdf-link:hover {
+  background-color: var(--light-color);
+  transform: translateY(-3px);
+}
+
+
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10001;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: var(--accent-color);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Video Script Section */
+        .video-script-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: start;
+        }
+
+        .script-item {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+        }
+
+        .script-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .script-info {
+            padding: 20px;
+        }
+
+        .script-info h3 {
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .script-info p {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .script-files {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+        }
+
+        .script-files h3 {
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .script-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .script-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent-color);
+            text-decoration: none;
+            padding: 12px 20px;
+            background-color: var(--light-color);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .script-link:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            transform: translateX(5px);
+        }
+
+        .script-link i {
+            font-size: 1.2rem;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-info {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .contact-text h4 {
+            color: var(--text-color);
+            margin-bottom: 5px;
+        }
+
+        .contact-text p {
+            color: var(--text-color);
+        }
+
+        .contact-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .contact-link:hover {
+            background-color: var(--light-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-link:hover .contact-icon {
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            transform: scale(1.1);
+        }
+
+        .contact-link:hover .contact-text h4 {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--light-color);
+            color: white;
+            padding: 50px 0 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 46px;
+            height: 46px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.25s ease;
+            font-size: 1.1rem;
+        }
+
+        .social-link i {
+            color: var(--accent-color);
+        }
+
+        .social-link:hover {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            transform: translateY(-2px);
+        }
+
+        .social-link:hover i {
+            color: var(--text-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0.5rem 0;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            header {
+                padding: 100px 0 60px;
+            }
+
+            .profile-img {
+                width: 150px;
+                height: 150px;
+                object-position: center top;
+                filter: brightness(1.15) contrast(1.15);
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+
+            .project-image-container {
+                height: 180px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .copies-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+
+            .copy-img {
+                height: 280px;
+            }
+
+            .certificate-img {
+                height: 250px;
+            }
+
+            .video-script-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .modal-content {
+                max-width: 95%;
+                max-height: 95%;
+            }
+
+            .modal-close {
+                top: 10px;
+                right: 15px;
+                font-size: 30px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+               HS
+            
+            </a>
+            <ul class="nav-links">
+                <li>
+                    <a href="#about">
+                        <i class="fas fa-user"></i>
+                        About Me
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills">
+                        <i class="fas fa-code"></i>
+                        Skills
+                    </a>
+                </li>
+                <li>
+    <a href="#services">
+        <i class="fas fa-briefcase"></i>
+        My Services
+    </a>
+</li>
+                <li>
+                    <a href="#experience">
+                        <i class="fas fa-award"></i>
+                        Experience
+    </a>
+</li>
+          
+                <li>
+                    <a href="#copies">
+                        <i class="fas fa-project-diagram"></i>
+                        Projects
+                    </a>
+                </li>
+     
+                <li>
+                    <a href="#footer">
+                        <i class="fas fa-envelope"></i>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="profile-img-container">
+                <img src="logo.jpeg" alt="Basel Sharaf" class="profile-img">
+            </div>
+  <h1>Hadeer Saad</h1>
+            <p>Interior &amp; Landscape Designer</p>
+            <div class="cta-buttons">
+<a href="#projects" class="cta-btn primary-btn">View My Work</a>
+            <a href="#footer" class="cta-btn secondary-btn">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2> About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+I am an Interior and Landscape Designer with over 8 years of experience in creating functional, modern, and visually appealing spaces. I specialize in both residential and commercial projects, delivering high-quality interior and exterior designs that combine creativity with technical precision.
+Throughout my career, I have completed 1000+ projects across Egypt and the Gulf region, including apartments, villas, facades, kitchens, commercial shops, gardens, kids areas, and more. My goal is always to turn ideas into practical, unique designs that enhance the beauty and usability of every space.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">8+</div>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <p>Projects Completed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- courses -->
+
+<!-- courses -->
+<section id="skills" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2> Skills</h2>
+        </div>
+        <div class="skills-container">
+
+            <div class="skill-category">
+                <h3><i class="fas fa-drafting-compass"></i> Design Expertise</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Interior &amp; exterior design mastery</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                 <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Kitchens &amp; dressing rooms</span>
+                        <span>92%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Residential &amp; commercial facades</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Landscape &amp; outdoor design</span>
+                        <span>93%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 93%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Space planning &amp; layout optimization</span>
+                        <span>94%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 94%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Concept to final render</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Tools &amp; Visualization</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>SketchUp</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>3Ds Max</span>
+                        <span>92%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Lumion</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>V-Ray</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>AutoCAD</span>
+                        <span>92%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Advanced 3D visualization</span>
+                        <span>94%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 94%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Detail &amp; creative problem-solving</span>
+                        <span>93%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 93%"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="services"  class="section">
+    <div class="container">
+<div class="section-header">
+<h2> Services</h2>
+</div>
+
+    <div class="service-card">
+      <i class="fas fa-couch"></i>
+      <h3>Interior Design</h3>
+      <p>Tailored interiors that balance beauty and function.</p>
+      <ul>
+        <li>Apartments, villas, and rooms</li>
+        <li>Commercial spaces and shops</li>
+        <li>Kitchen &amp; dressing room design</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-tree"></i>
+      <h3>Exterior &amp; Landscape Concepts</h3>
+      <p>Complete outdoor experiences from concept to final render.</p>
+      <ul>
+        <li>Full landscape planning for villas and gardens</li>
+        <li>Kids area design and outdoor amenities</li>
+        <li>Garden, outdoor, and villa landscapes</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-city"></i>
+      <h3>Facade Design</h3>
+      <p>Distinctive facades that elevate residential and commercial projects.</p>
+      <ul>
+        <li>Residential and commercial building facades</li>
+        <li>Exterior design coordination</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-drafting-compass"></i>
+      <h3>3D Modeling &amp; Rendering</h3>
+      <p>Photorealistic visuals to bring ideas to life.</p>
+      <ul>
+        <li>Advanced 3D visualization and rendering</li>
+        <li>SketchUp, 3Ds Max, Lumion, V-Ray, AutoCAD</li>
+        <li>Technical drawings and architectural detailing</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-mug-hot"></i>
+      <h3>Mall &amp; Café Planning</h3>
+      <p>Functional, inviting layouts for retail and hospitality.</p>
+      <ul>
+        <li>Mall and café interior planning</li>
+        <li>Space planning &amp; layout optimization</li>
+      </ul>
+    </div>
+
+
+    </div>
+</section>
+
+
+
+<section id="experience" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2> Experience</h2>
+            <p>With more than 8 years of professional experience, I have delivered a wide variety of successful projects across Egypt, Saudi Arabia, and the UAE.</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>My portfolio spans interior, exterior, and landscape work, reflecting an ability to manage diverse project types, understand client needs, and deliver high-quality results with creativity and precision.</p>
+                <ul class="experience-list">
+                    <li><span class="experience-count">250</span> apartments</li>
+                    <li><span class="experience-count">500</span> kitchens</li>
+                    <li><span class="experience-count">35</span> exterior facades in the Gulf region</li>
+                    <li><span class="experience-count">10</span> residential building facades in Egypt</li>
+                    <li><span class="experience-count">15</span> commercial shop facades</li>
+                    <li><span class="experience-count">2</span> café designs</li>
+                    <li><span class="experience-count">18</span> kids areas</li>
+                    <li><span class="experience-count">16</span> villa designs</li>
+                </ul>
+                <p>This experience reflects my ability to manage diverse project types, understand client needs, and deliver high-quality results with creativity and precision.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="copies" class="section">
+        <div class="container">
+            <div class="section-header">
+            <h2>Gallery</h2>
+            <p>A collection of my best work</p>
+            </div>
+
+            <div class="copies-grid">
+
+            <!-- Images from 1 to 56 -->
+            <!-- You can paste this block directly -->
+
+            <!-- Start loop -->
+                <div class="copy-item">
+                    <div class="copy-overlay">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <img src="Copies/1.jpeg" alt="Copy 1" class="copy-img">
+                </div>
+
+              <div class="copy-item">
+                    <div class="copy-overlay">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                <img src="Copies/2.jpeg" alt="Copy 2" class="copy-img">
+                </div>
+
+                  <div class="copy-item">
+                    <div class="copy-overlay">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                <img src="Copies/3.jpeg" alt="Copy 3" class="copy-img">
+                </div>
+
+                  <div class="copy-item">
+                    <div class="copy-overlay">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                <img src="Copies/4.jpeg" alt="Copy 4" class="copy-img">
+                </div>
+
+                  <div class="copy-item">
+                    <div class="copy-overlay">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                <img src="Copies/5.jpeg" alt="Copy 5" class="copy-img">
+                </div>
+               
+            <!-- from 6 to 56 -->
+            <!-- I will generate all remaining items -->
+
+            <!-- AUTO-GENERATED BELOW -->
+
+            <!-- 6 -->
+            <div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/6.jpeg" alt="Copy 6" class="copy-img"></div>
+
+            <!-- 7 -->
+            <div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/7.jpeg" alt="Copy 7" class="copy-img"></div>
+
+            <!-- 8 -->
+            <div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/8.jpeg" alt="Copy 8" class="copy-img"></div>
+
+            <!-- 9 -->
+            <div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/9.jpeg" alt="Copy 9" class="copy-img"></div>
+
+            <!-- 10 -->
+            <div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/10.jpeg" alt="Copy 10" class="copy-img"></div>
+
+            <!-- 11 -->
+            <div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/11.jpeg" alt="Copy 11" class="copy-img"></div>
+
+            <!-- 12 - 56 GENERATED -->
+            <!-- I’ll compress them into clean lines so it's shorter but still copy-paste ready -->
+
+            <!-- 12 to 56 -->
+            <!-- Copy & Paste: -->
+            <!-- Each line is: <div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/X.jpeg" alt="Copy X" class="copy-img"></div> -->
+
+            <!-- START -->
+            <!-- you can copy directly -->
+            <!-- 12 -->
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/12.jpeg" alt="Copy 12" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/13.jpeg" alt="Copy 13" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/14.jpeg" alt="Copy 14" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/15.jpeg" alt="Copy 15" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/16.jpeg" alt="Copy 16" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/17.jpeg" alt="Copy 17" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/18.jpeg" alt="Copy 18" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/19.jpeg" alt="Copy 19" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/20.jpeg" alt="Copy 20" class="copy-img"></div>
+
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/21.jpeg" alt="Copy 21" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/22.jpeg" alt="Copy 22" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/23.jpeg" alt="Copy 23" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/24.jpeg" alt="Copy 24" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/25.jpeg" alt="Copy 25" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/26.jpeg" alt="Copy 26" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/27.jpeg" alt="Copy 27" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/28.jpeg" alt="Copy 28" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/29.jpeg" alt="Copy 29" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/30.jpeg" alt="Copy 30" class="copy-img"></div>
+
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/31.jpeg" alt="Copy 31" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/32.jpeg" alt="Copy 32" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/33.jpeg" alt="Copy 33" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/34.jpeg" alt="Copy 34" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/35.jpeg" alt="Copy 35" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/36.jpeg" alt="Copy 36" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/37.jpeg" alt="Copy 37" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/38.jpeg" alt="Copy 38" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/39.jpeg" alt="Copy 39" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/40.jpeg" alt="Copy 40" class="copy-img"></div>
+
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/41.jpeg" alt="Copy 41" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/42.jpeg" alt="Copy 42" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/43.jpeg" alt="Copy 43" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/44.jpeg" alt="Copy 44" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/45.jpeg" alt="Copy 45" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/46.jpeg" alt="Copy 46" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/47.jpeg" alt="Copy 47" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/48.jpeg" alt="Copy 48" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/49.jpeg" alt="Copy 49" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/50.jpeg" alt="Copy 50" class="copy-img"></div>
+
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/51.jpeg" alt="Copy 51" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/52.jpeg" alt="Copy 52" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/53.jpeg" alt="Copy 53" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/54.jpeg" alt="Copy 54" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/55.jpeg" alt="Copy 55" class="copy-img"></div>
+<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/56.jpeg" alt="Copy 56" class="copy-img"></div>
+            <!-- END -->
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+    
+                <div class="footer-section">
+                    <h3>Hadeer Saad</h3>
+                    <p>Interior & Landscape Designer</p>
+                </div>
+    
+         
+    
+                <div class="footer-section">
+                    <h3>Contact Me</h3>
+    
+                    <div class="social-links">
+
+                        <!-- WhatsApp / Phone -->
+                        <a href="https://wa.me/201100221352" class="social-link" title="WhatsApp">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/hadeer_a_saad" target="_blank" class="social-link" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/hadeerAsaadma" target="_blank" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    
+                        <!-- Email -->
+                        <a href="mailto:Saadhadeer06@gmail.com" class="social-link" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    
+                        <!-- Behance -->
+                        <a href="https://www.behance.net/saadhader5639" target="_blank" class="social-link" title="Behance">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    
+                    </div>
+                    
+                </div>
+    
+            </div>
+    
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hadeer Saad. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+
+    
+
+
+    <!-- Modal for Image Viewing -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Add smooth scrolling to navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation to elements when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        });
+
+        document.querySelectorAll('.section').forEach((section) => {
+            observer.observe(section);
+        });
+
+        // Update skill bars width on scroll
+        const skillBars = document.querySelectorAll('.skill-progress');
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.width = entry.target.parentElement.previousElementSibling.lastElementChild.textContent;
+                }
+            });
+        });
+
+        skillBars.forEach(bar => {
+            skillObserver.observe(bar);
+        });
+
+        // Modal functionality for images
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.querySelector('.modal-close');
+
+        // Add click event listeners to all copy and certificate images
+        document.querySelectorAll('.copy-item, .certificate-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                modal.style.display = 'block';
+                modalImg.src = img.src;
+                modalImg.alt = img.alt;
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
+        });
+
+        // Close modal when clicking the X button
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'block') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }
+        });
+    </script>
+</body>
+</html>
