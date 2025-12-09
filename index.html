@@ -738,6 +738,31 @@
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
         }
 
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0 20px 10px;
+        }
+
+        .filter-btn {
+            padding: 10px 16px;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+            background: transparent;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 600;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--accent-color);
+            color: var(--text-color);
+            border-color: var(--accent-color);
+        }
+
         .copy-overlay {
             position: absolute;
             top: 0;
@@ -1515,135 +1540,20 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
         <div class="container">
             <div class="section-header">
             <h2>Gallery</h2>
-            <p>A collection of my best work</p>
+            <p>Browse by space type</p>
             </div>
 
-            <div class="copies-grid">
-
-            <!-- Images from 1 to 56 -->
-            <!-- You can paste this block directly -->
-
-            <!-- Start loop -->
-                <div class="copy-item">
-                    <div class="copy-overlay">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <img src="Copies/1.jpeg" alt="Copy 1" class="copy-img">
-                </div>
-
-              <div class="copy-item">
-                    <div class="copy-overlay">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                <img src="Copies/2.jpeg" alt="Copy 2" class="copy-img">
-                </div>
-
-                  <div class="copy-item">
-                    <div class="copy-overlay">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                <img src="Copies/3.jpeg" alt="Copy 3" class="copy-img">
-                </div>
-
-                  <div class="copy-item">
-                    <div class="copy-overlay">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                <img src="Copies/4.jpeg" alt="Copy 4" class="copy-img">
-                </div>
-
-                  <div class="copy-item">
-                    <div class="copy-overlay">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                <img src="Copies/5.jpeg" alt="Copy 5" class="copy-img">
-                </div>
-               
-            <!-- from 6 to 56 -->
-            <!-- I will generate all remaining items -->
-
-            <!-- AUTO-GENERATED BELOW -->
-
-            <!-- 6 -->
-            <div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/6.jpeg" alt="Copy 6" class="copy-img"></div>
-
-            <!-- 7 -->
-            <div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/7.jpeg" alt="Copy 7" class="copy-img"></div>
-
-            <!-- 8 -->
-            <div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/8.jpeg" alt="Copy 8" class="copy-img"></div>
-
-            <!-- 9 -->
-            <div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/9.jpeg" alt="Copy 9" class="copy-img"></div>
-
-            <!-- 10 -->
-            <div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/10.jpeg" alt="Copy 10" class="copy-img"></div>
-
-            <!-- 11 -->
-            <div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/11.jpeg" alt="Copy 11" class="copy-img"></div>
-
-            <!-- 12 - 56 GENERATED -->
-            <!-- I’ll compress them into clean lines so it's shorter but still copy-paste ready -->
-
-            <!-- 12 to 56 -->
-            <!-- Copy & Paste: -->
-            <!-- Each line is: <div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/X.jpeg" alt="Copy X" class="copy-img"></div> -->
-
-            <!-- START -->
-            <!-- you can copy directly -->
-            <!-- 12 -->
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/12.jpeg" alt="Copy 12" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/13.jpeg" alt="Copy 13" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/14.jpeg" alt="Copy 14" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/15.jpeg" alt="Copy 15" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/16.jpeg" alt="Copy 16" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/17.jpeg" alt="Copy 17" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/18.jpeg" alt="Copy 18" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/19.jpeg" alt="Copy 19" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/20.jpeg" alt="Copy 20" class="copy-img"></div>
-
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/21.jpeg" alt="Copy 21" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/22.jpeg" alt="Copy 22" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/23.jpeg" alt="Copy 23" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/24.jpeg" alt="Copy 24" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/25.jpeg" alt="Copy 25" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/26.jpeg" alt="Copy 26" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/27.jpeg" alt="Copy 27" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/28.jpeg" alt="Copy 28" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/29.jpeg" alt="Copy 29" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/30.jpeg" alt="Copy 30" class="copy-img"></div>
-
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/31.jpeg" alt="Copy 31" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/32.jpeg" alt="Copy 32" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/33.jpeg" alt="Copy 33" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/34.jpeg" alt="Copy 34" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/35.jpeg" alt="Copy 35" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/36.jpeg" alt="Copy 36" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/37.jpeg" alt="Copy 37" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/38.jpeg" alt="Copy 38" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/39.jpeg" alt="Copy 39" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/40.jpeg" alt="Copy 40" class="copy-img"></div>
-
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/41.jpeg" alt="Copy 41" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/42.jpeg" alt="Copy 42" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/43.jpeg" alt="Copy 43" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/44.jpeg" alt="Copy 44" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/45.jpeg" alt="Copy 45" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/46.jpeg" alt="Copy 46" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/47.jpeg" alt="Copy 47" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/48.jpeg" alt="Copy 48" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/49.jpeg" alt="Copy 49" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/50.jpeg" alt="Copy 50" class="copy-img"></div>
-
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/51.jpeg" alt="Copy 51" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/52.jpeg" alt="Copy 52" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/53.jpeg" alt="Copy 53" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/54.jpeg" alt="Copy 54" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/55.jpeg" alt="Copy 55" class="copy-img"></div>
-<div class="copy-item"><div class="copy-overlay"><i class="fas fa-eye"></i></div><img src="Copies/56.jpeg" alt="Copy 56" class="copy-img"></div>
-            <!-- END -->
-
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Bedroom">Bedroom</button>
+                <button class="filter-btn" data-filter="Dining room">Dining room</button>
+                <button class="filter-btn" data-filter="Exterior">Exterior</button>
+                <button class="filter-btn" data-filter="Kitchen">Kitchen</button>
+                <button class="filter-btn" data-filter="Living">Living</button>
             </div>
+
+            <div class="copies-grid" id="copiesGrid"></div>
+
         </div>
     </section>
 
@@ -1750,20 +1660,146 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
             skillObserver.observe(bar);
         });
 
+        // Gallery data and filtering
+        const galleryData = {
+            'Bedroom': [
+                'WhatsApp Image 2025-12-09 at 4.14.20 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.22 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.22 PM (2).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.22 PM (3).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.22 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.23 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.24 PM.jpeg'
+            ],
+            'Dining room': [
+                'WhatsApp Image 2025-12-09 at 4.01.28 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.01.29 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.01.33 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.01.33 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.01.34 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.01.34 PM (2).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.01.34 PM (3).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.01.34 PM (4).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.01.34 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.01.35 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.01.35 PM.jpeg'
+            ],
+            'Exterior': [
+                'WhatsApp Image 2025-12-09 at 4.18.46 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.18.46 PM (2).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.18.46 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.18.47 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.18.47 PM (2).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.18.47 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.18.48 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.18.48 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.19.06 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.19.07 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.19.07 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.19.08 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.19.08 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.19.37 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.19.38 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.23.09 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.23.09 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.23.10 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.23.10 PM.jpeg'
+            ],
+            'Kitchen': [
+                'WhatsApp Image 2025-12-09 at 4.24.45 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.46 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.46 PM (2).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.46 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.47 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.47 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.49 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.49 PM (2).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.49 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.50 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.50 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.51 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.51 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.52 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.52 PM (2).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.52 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.24.53 PM.jpeg'
+            ],
+            'Living': [
+                'WhatsApp Image 2025-12-09 at 4.14.18 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.18 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.19 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.19 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.20 PM (2).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.20 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.24 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.24 PM (2).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.24 PM (3).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.25 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.26 PM (1).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.26 PM (2).jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.26 PM.jpeg'
+            ]
+        };
+
+        const copiesGrid = document.getElementById('copiesGrid');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+
+        const buildGalleryItems = (filter = 'all') => {
+            if (!copiesGrid) return;
+            copiesGrid.innerHTML = '';
+
+            const items = [];
+            Object.entries(galleryData).forEach(([category, files]) => {
+                files.forEach(file => items.push({ category, file }));
+            });
+
+            const filtered = filter === 'all' ? items : items.filter(item => item.category === filter);
+
+            filtered.forEach(({ category, file }) => {
+                const card = document.createElement('div');
+                card.className = 'copy-item';
+                card.dataset.category = category;
+
+                const encodedCategory = encodeURIComponent(category);
+                const encodedFile = encodeURIComponent(file);
+                const src = `Copies/${encodedCategory}/${encodedFile}`;
+
+                card.innerHTML = `
+                    <div class="copy-overlay">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <img src="${src}" alt="${category} - ${file}" class="copy-img">
+                `;
+
+                copiesGrid.appendChild(card);
+            });
+        };
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                buildGalleryItems(btn.dataset.filter);
+            });
+        });
+
+        buildGalleryItems('all');
+
         // Modal functionality for images
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImage');
         const closeBtn = document.querySelector('.modal-close');
 
-        // Add click event listeners to all copy and certificate images
-        document.querySelectorAll('.copy-item, .certificate-item').forEach(item => {
-            item.addEventListener('click', function() {
-                const img = this.querySelector('img');
-                modal.style.display = 'block';
-                modalImg.src = img.src;
-                modalImg.alt = img.alt;
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            });
+        // Open modal on image click (delegated to handle dynamic items)
+        document.addEventListener('click', function(e) {
+            const item = e.target.closest('.copy-item, .certificate-item');
+            if (!item) return;
+            const img = item.querySelector('img');
+            if (!img) return;
+            modal.style.display = 'block';
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
         });
 
         // Close modal when clicking the X button
