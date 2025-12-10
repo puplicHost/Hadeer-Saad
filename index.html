@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hadeer Saad - Interior &amp; Landscape Designer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,14 +17,13 @@
         }
 
         :root {
-            --primary-color: #8208be;
-            --secondary-color: #8208be;
-            --accent-color: #8208be;
-            --dark-color: #420460;
-            --light-color: #8208be;
-            --text-color:#fff;
-            --card-bg: #14021d;  
-            --border-color: #fff;
+
+            --accent-color: #ffaf34;
+            --dark-color: #0e1e2e;
+            --light-color: #0e1e2e;
+            --text-color: #ffaf34;
+            --card-bg: #0e1e2e;
+            --border-color: #ffaf34;
         }
 
         html {
@@ -120,7 +121,7 @@
         /* Header Section */
         header {
             background: var(--nav-bg);
-            color: white;
+            color: var(--accent-color);
             padding: 120px 0 60px;
             text-align: center;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -133,7 +134,7 @@
             object-fit: cover;
             object-position: center top;
             margin-bottom: 20px;
-            border: 5px solid white;
+            border: 5px solid var(--accent-color);
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
             filter: brightness(1.1) contrast(1.1);
@@ -157,7 +158,7 @@
             right: -10px;
             bottom: -10px;
             border-radius: 50%;
-            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+            background: linear-gradient(45deg, rgba(255, 175, 52, 0.1), rgba(255, 175, 52, 0.3));
             z-index: -1;
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -170,12 +171,12 @@
         header h1 {
             font-size: 3rem;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px #fff;
+            text-shadow: 2px 2px 4px var(--dark-color);
         }
 
         header p {
             font-size: 1.4rem;
-            color: #fff;
+            color: var(--accent-color);
             margin-bottom: 30px;
         }
 
@@ -195,13 +196,14 @@
         }
 
         .primary-btn {
-            background-color: var(--accent-color);
-            color: var(--text-color);
+            background-color: var(--dark-color);
+            color: var(--accent-color);
+            border: 2px solid var(--accent-color);
         }
 
         .secondary-btn {
-            border: 2px solid white;
-            color: white;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
         }
 
         .cta-btn:hover {
@@ -210,7 +212,7 @@
         }
 
         .primary-btn:hover {
-          background-color:  var(--text-color);
+            background-color: var(--text-color);
             color: var(--accent-color);
         }
 
@@ -233,10 +235,10 @@
             text-align: center;
             margin-bottom: 60px;
         }
-    
+
         .section-header h2 {
             font-size: 2.5rem;
-            color: #fff;
+            color: var(--accent-color);
             margin-bottom: 20px;
             position: relative;
             display: inline-block;
@@ -272,154 +274,169 @@
             gap: 20px;
         }
 
-.services-section {
-  padding: 80px 10%;
-  background: var(--dark-color);
-  color: var(--text-color);
-  text-align: center;
-}
+        .services-section {
+            padding: 80px 10%;
+            background: var(--dark-color);
+            color: var(--text-color);
+            text-align: center;
+        }
 
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 50px;
-  position: relative;
-  color: var(--light-color);
-  letter-spacing: 1px;
-}
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            position: relative;
+            color: var(--light-color);
+            letter-spacing: 1px;
+        }
 
-.services-container {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-.service-card {
-  background: var(--card-bg);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 30px;
-  text-align: left;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
+        .services-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
 
-.service-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(130, 8, 190, 0.2), rgba(255, 255, 255, 0.05));
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  border-radius: 20px;
-}
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 175, 52, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: left;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
 
-.service-card:hover::before {
-  opacity: 1;
-}
+        .service-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 175, 52, 0.2), rgba(255, 175, 52, 0.05));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            border-radius: 20px;
+        }
 
-.service-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  border-color: var(--primary-color);
-  box-shadow: 0 0 20px rgba(130, 8, 190, 0.6);
-}
+        .service-card:hover::before {
+            opacity: 1;
+        }
 
-.service-card i {
-  font-size: 2.2rem;
-  color: var(--accent-color);
-  margin-bottom: 20px;
-}
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 20px rgba(130, 8, 190, 0.6);
+        }
 
-.service-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-  color: var(--light-color);
-}
+        .service-card i {
+            font-size: 2.2rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
 
-.service-card p {
-  font-size: 0.95rem;
-  color: #d3cde1;
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--light-color);
+        }
 
-.service-card ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 10px;
-}
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
 
-.service-card ul li {
-  margin: 8px 0;
-  color: #b9aee3;
-  position: relative;
-  padding-left: 22px;
-  transition: color 0.3s ease;
-}
+        .service-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
 
-.service-card ul li::before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: var(--accent-color);
-  font-size: 1.1rem;
-}
+        .service-card ul li {
+            margin: 8px 0;
+            color: var(--text-color);
+            position: relative;
+            padding-left: 22px;
+            transition: color 0.3s ease;
+        }
 
-.service-card ul li:hover {
-  color: #fff;
-}
+        .service-card ul li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
 
-
-
-/* Responsive */
-@media (max-width:640px){.container{margin:16px;padding:16px}}
- 
-/* courses */
-
-
-.section-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-.section-header h2 {
-    font-size: 28px;
-    color: var(--text-color);
-}
-.courses-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-}
-.course-card {
-    background: transparent;
-    border-radius: 14px;
-    padding: 20px;
-    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 2px solid #fff;
-}
-.course-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.15);
-}
-.course-card h3 {
-    font-size: 18px;
-    color: #ffff;
-    margin-bottom: 8px;
-}
-.course-card p {
-    font-size: 15px;
-    color: #fff;
-    line-height: 1.6;
-}
+        .service-card ul li:hover {
+            color: var(--accent-color);
+        }
 
 
 
+        /* Responsive */
+        @media (max-width:640px) {
+            .container {
+                margin: 16px;
+                padding: 16px
+            }
+        }
 
-/* small utility */
-.muted{color:var(--muted);font-size:13px}
+        /* courses */
+
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 28px;
+            color: var(--text-color);
+        }
+
+        .courses-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .course-card {
+            background: transparent;
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 2px solid var(--accent-color);
+        }
+
+        .course-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.15);
+        }
+
+        .course-card h3 {
+            font-size: 18px;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+        }
+
+        .course-card p {
+            font-size: 15px;
+            color: var(--accent-color);
+            line-height: 1.6;
+        }
+
+
+
+
+        /* small utility */
+        .muted {
+            color: var(--muted);
+            font-size: 13px
+        }
 
         .stat-item {
             background-color: var(--card-bg);
@@ -588,7 +605,7 @@
         }
 
         .certificate-overlay i {
-            color: white;
+            color: var(--accent-color);
             font-size: 2rem;
             animation: pulse 2s infinite;
         }
@@ -783,15 +800,23 @@
         }
 
         .copy-overlay i {
-            color: white;
+            color: var(--accent-color);
             font-size: 2rem;
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
 
         .copy-img {
@@ -808,61 +833,61 @@
             transform: scale(1.1);
         }
 
-.section.pdfs .pdfs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  padding: 20px 0;
-  text-align: center;
-  background-color: var(--dark-color);
-}
+        .section.pdfs .pdfs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            padding: 20px 0;
+            text-align: center;
+            background-color: var(--dark-color);
+        }
 
-.section.pdfs .pdf-item {
-  background-color: var(--dark-color);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 20px;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-}
+        .section.pdfs .pdf-item {
+            background-color: var(--dark-color);
+            border: 1px solid rgba(255, 175, 52, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        }
 
-.section.pdfs .pdf-item:hover {
-  transform: translateY(-8px);
-  border-color: var(--accent-color);
-  box-shadow: 0 10px 25px rgba(130, 8, 190, 0.4);
-}
+        .section.pdfs .pdf-item:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 25px rgba(130, 8, 190, 0.4);
+        }
 
-.section.pdfs .pdf-item img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
-}
+        .section.pdfs .pdf-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 175, 52, 0.1);
+            transition: transform 0.3s ease;
+        }
 
-.section.pdfs .pdf-item:hover img {
-  transform: scale(1.03);
-  border-color: var(--accent-color);
-}
+        .section.pdfs .pdf-item:hover img {
+            transform: scale(1.03);
+            border-color: var(--accent-color);
+        }
 
-.section.pdfs .pdf-link {
-  display: inline-block;
-  padding: 10px 18px;
-  background-color: var(--accent-color);
-  color: #fff;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
+        .section.pdfs .pdf-link {
+            display: inline-block;
+            padding: 10px 18px;
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
 
-.section.pdfs .pdf-link:hover {
-  background-color: var(--light-color);
-  transform: translateY(-3px);
-}
+        .section.pdfs .pdf-link:hover {
+            background-color: var(--light-color);
+            transform: translateY(-3px);
+        }
 
 
 
@@ -895,7 +920,7 @@
             position: absolute;
             top: 20px;
             right: 30px;
-            color: white;
+            color: var(--accent-color);
             font-size: 40px;
             font-weight: bold;
             cursor: pointer;
@@ -908,8 +933,13 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         /* Video Script Section */
@@ -1019,7 +1049,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: var(--dark-color);
             font-size: 1.2rem;
         }
 
@@ -1059,7 +1089,7 @@
         /* Footer */
         footer {
             background-color: var(--light-color);
-            color: white;
+            color: var(--accent-color);
             padding: 50px 0 20px;
             border-top: 1px solid var(--border-color);
         }
@@ -1091,7 +1121,7 @@
         }
 
         .footer-links a:hover {
-            color: white;
+            color: var(--accent-color);
         }
 
         .social-links {
@@ -1132,7 +1162,7 @@
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 175, 52, 0.1);
         }
 
         /* Responsive Design */
@@ -1209,8 +1239,15 @@
 
         /* Animations */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .animate {
@@ -1218,12 +1255,13 @@
         }
     </style>
 </head>
+
 <body>
     <nav>
         <div class="container nav-container">
             <a href="#" class="logo">
-               HS
-            
+                HS
+
             </a>
             <ul class="nav-links">
                 <li>
@@ -1239,25 +1277,25 @@
                     </a>
                 </li>
                 <li>
-    <a href="#services">
-        <i class="fas fa-briefcase"></i>
-        My Services
-    </a>
-</li>
+                    <a href="#services">
+                        <i class="fas fa-briefcase"></i>
+                        My Services
+                    </a>
+                </li>
                 <li>
                     <a href="#experience">
                         <i class="fas fa-award"></i>
                         Experience
-    </a>
-</li>
-          
+                    </a>
+                </li>
+
                 <li>
                     <a href="#copies">
                         <i class="fas fa-project-diagram"></i>
                         Projects
                     </a>
                 </li>
-     
+
                 <li>
                     <a href="#footer">
                         <i class="fas fa-envelope"></i>
@@ -1273,11 +1311,11 @@
             <div class="profile-img-container">
                 <img src="logo.jpeg" alt="Basel Sharaf" class="profile-img">
             </div>
-  <h1>Hadeer Saad</h1>
+            <h1>Hadeer Saad</h1>
             <p>Interior &amp; Landscape Designer</p>
             <div class="cta-buttons">
-<a href="#projects" class="cta-btn primary-btn">View My Work</a>
-            <a href="#footer" class="cta-btn secondary-btn">Contact Me</a>
+                <a href="#projects" class="cta-btn primary-btn">View My Work</a>
+                <a href="#footer" class="cta-btn secondary-btn">Contact Me</a>
             </div>
         </div>
     </header>
@@ -1290,8 +1328,14 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-I am an Interior and Landscape Designer with over 8 years of experience in creating functional, modern, and visually appealing spaces. I specialize in both residential and commercial projects, delivering high-quality interior and exterior designs that combine creativity with technical precision.
-Throughout my career, I have completed 1000+ projects across Egypt and the Gulf region, including apartments, villas, facades, kitchens, commercial shops, gardens, kids areas, and more. My goal is always to turn ideas into practical, unique designs that enhance the beauty and usability of every space.
+                        I am an Interior and Landscape Designer with over 8 years of experience in creating functional,
+                        modern, and visually appealing spaces. I specialize in both residential and commercial projects,
+                        delivering high-quality interior and exterior designs that combine creativity with technical
+                        precision.
+                        Throughout my career, I have completed 1000+ projects across Egypt and the Gulf region,
+                        including apartments, villas, facades, kitchens, commercial shops, gardens, kids areas, and
+                        more. My goal is always to turn ideas into practical, unique designs that enhance the beauty and
+                        usability of every space.
                     </p>
                 </div>
                 <div class="about-stats">
@@ -1307,244 +1351,218 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
             </div>
         </div>
     </section>
-<!-- courses -->
+    <!-- courses -->
 
-<!-- courses -->
-<section id="skills" class="section">
-    <div class="container">
-        <div class="section-header">
-            <h2> Skills</h2>
-        </div>
-        <div class="skills-container">
-
-            <div class="skill-category">
-                <h3><i class="fas fa-drafting-compass"></i> Design Expertise</h3>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Interior &amp; exterior design mastery</span>
-                        <span>95%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%"></div>
-                    </div>
-                </div>
-                 <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Kitchens &amp; dressing rooms</span>
-                        <span>92%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 92%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Residential &amp; commercial facades</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Landscape &amp; outdoor design</span>
-                        <span>93%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 93%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Space planning &amp; layout optimization</span>
-                        <span>94%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 94%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Concept to final render</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3><i class="fas fa-tools"></i> Tools &amp; Visualization</h3>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>SketchUp</span>
-                        <span>95%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>3Ds Max</span>
-                        <span>92%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 92%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Lumion</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>V-Ray</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>AutoCAD</span>
-                        <span>92%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 92%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Advanced 3D visualization</span>
-                        <span>94%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 94%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Detail &amp; creative problem-solving</span>
-                        <span>93%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 93%"></div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section id="services"  class="section">
-    <div class="container">
-<div class="section-header">
-<h2> Services</h2>
-</div>
-
-    <div class="service-card">
-      <i class="fas fa-couch"></i>
-      <h3>Interior Design</h3>
-      <p>Tailored interiors that balance beauty and function.</p>
-      <ul>
-        <li>Apartments, villas, and rooms</li>
-        <li>Commercial spaces and shops</li>
-        <li>Kitchen &amp; dressing room design</li>
-      </ul>
-    </div>
-
-    <div class="service-card">
-      <i class="fas fa-tree"></i>
-      <h3>Exterior &amp; Landscape Concepts</h3>
-      <p>Complete outdoor experiences from concept to final render.</p>
-      <ul>
-        <li>Full landscape planning for villas and gardens</li>
-        <li>Kids area design and outdoor amenities</li>
-        <li>Garden, outdoor, and villa landscapes</li>
-      </ul>
-    </div>
-
-    <div class="service-card">
-      <i class="fas fa-city"></i>
-      <h3>Facade Design</h3>
-      <p>Distinctive facades that elevate residential and commercial projects.</p>
-      <ul>
-        <li>Residential and commercial building facades</li>
-        <li>Exterior design coordination</li>
-      </ul>
-    </div>
-
-    <div class="service-card">
-      <i class="fas fa-drafting-compass"></i>
-      <h3>3D Modeling &amp; Rendering</h3>
-      <p>Photorealistic visuals to bring ideas to life.</p>
-      <ul>
-        <li>Advanced 3D visualization and rendering</li>
-        <li>SketchUp, 3Ds Max, Lumion, V-Ray, AutoCAD</li>
-        <li>Technical drawings and architectural detailing</li>
-      </ul>
-    </div>
-
-    <div class="service-card">
-      <i class="fas fa-mug-hot"></i>
-      <h3>Mall &amp; Café Planning</h3>
-      <p>Functional, inviting layouts for retail and hospitality.</p>
-      <ul>
-        <li>Mall and café interior planning</li>
-        <li>Space planning &amp; layout optimization</li>
-      </ul>
-    </div>
-
-
-    </div>
-</section>
-
-
-
-<section id="experience" class="section">
-    <div class="container">
-        <div class="section-header">
-            <h2> Experience</h2>
-            <p>With more than 8 years of professional experience, I have delivered a wide variety of successful projects across Egypt, Saudi Arabia, and the UAE.</p>
-        </div>
-        <div class="about-content">
-            <div class="about-text">
-                <p>My portfolio spans interior, exterior, and landscape work, reflecting an ability to manage diverse project types, understand client needs, and deliver high-quality results with creativity and precision.</p>
-                <ul class="experience-list">
-                    <li><span class="experience-count">250</span> apartments</li>
-                    <li><span class="experience-count">500</span> kitchens</li>
-                    <li><span class="experience-count">35</span> exterior facades in the Gulf region</li>
-                    <li><span class="experience-count">10</span> residential building facades in Egypt</li>
-                    <li><span class="experience-count">15</span> commercial shop facades</li>
-                    <li><span class="experience-count">2</span> café designs</li>
-                    <li><span class="experience-count">18</span> kids areas</li>
-                    <li><span class="experience-count">16</span> villa designs</li>
-                </ul>
-                <p>This experience reflects my ability to manage diverse project types, understand client needs, and deliver high-quality results with creativity and precision.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="copies" class="section">
+    <!-- courses -->
+    <section id="skills" class="section">
         <div class="container">
             <div class="section-header">
-            <h2>Gallery</h2>
-            <p>Browse by space type</p>
+                <h2> Skills</h2>
+            </div>
+            <div class="skills-container">
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-drafting-compass"></i> Design Expertise</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Interior &amp; exterior design mastery</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Kitchens &amp; dressing rooms</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Residential &amp; commercial facades</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Landscape &amp; outdoor design</span>
+                            <span>93%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 93%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Space planning &amp; layout optimization</span>
+                            <span>94%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 94%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Concept to final render</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools &amp; Visualization</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>SketchUp</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>3Ds Max</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Lumion</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>V-Ray</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>AutoCAD</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Advanced 3D visualization</span>
+                            <span>94%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 94%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Detail &amp; creative problem-solving</span>
+                            <span>93%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 93%"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2> Services</h2>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-couch"></i>
+                <h3>Interior Design</h3>
+                <p>Tailored interiors that balance beauty and function.</p>
+                <ul>
+                    <li>Apartments, villas, and rooms</li>
+                    <li>Commercial spaces and shops</li>
+                    <li>Kitchen &amp; dressing room design</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-tree"></i>
+                <h3>Exterior &amp; Landscape Concepts</h3>
+                <p>Complete outdoor experiences from concept to final render.</p>
+                <ul>
+                    <li>Full landscape planning for villas and gardens</li>
+                    <li>Kids area design and outdoor amenities</li>
+                    <li>Garden, outdoor, and villa landscapes</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-city"></i>
+                <h3>Facade Design</h3>
+                <p>Distinctive facades that elevate residential and commercial projects.</p>
+                <ul>
+                    <li>Residential and commercial building facades</li>
+                    <li>Exterior design coordination</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-drafting-compass"></i>
+                <h3>3D Modeling &amp; Rendering</h3>
+                <p>Photorealistic visuals to bring ideas to life.</p>
+                <ul>
+                    <li>Advanced 3D visualization and rendering</li>
+                    <li>SketchUp, 3Ds Max, Lumion, V-Ray, AutoCAD</li>
+                    <li>Technical drawings and architectural detailing</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-mug-hot"></i>
+                <h3>Mall &amp; Café Planning</h3>
+                <p>Functional, inviting layouts for retail and hospitality.</p>
+                <ul>
+                    <li>Mall and café interior planning</li>
+                    <li>Space planning &amp; layout optimization</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="copies" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery</h2>
+                <p>Browse by space type</p>
             </div>
 
             <div class="filter-bar">
                 <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Bathroom">Bathroom</button>
                 <button class="filter-btn" data-filter="Bedroom">Bedroom</button>
                 <button class="filter-btn" data-filter="Dining room">Dining room</button>
                 <button class="filter-btn" data-filter="Exterior">Exterior</button>
@@ -1557,63 +1575,97 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
         </div>
     </section>
 
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2> Experience</h2>
+                <p>With more than 8 years of professional experience, I have delivered a wide variety of successful
+                    projects across Egypt, Saudi Arabia, and the UAE.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>My portfolio spans interior, exterior, and landscape work, reflecting an ability to manage
+                        diverse project types, understand client needs, and deliver high-quality results with creativity
+                        and precision.</p>
+                    <ul class="experience-list">
+                        <li><span class="experience-count">250</span> apartments</li>
+                        <li><span class="experience-count">850</span> kitchens</li>
+                        <li><span class="experience-count">35</span> exterior facades in the Gulf region</li>
+                        <li><span class="experience-count">10</span> residential building facades in Egypt</li>
+                        <li><span class="experience-count">15</span> commercial shop facades</li>
+                        <li><span class="experience-count">2</span> café designs</li>
+                        <li><span class="experience-count">18</span> kids areas</li>
+                        <li><span class="experience-count">16</span> villa designs</li>
+                    </ul>
+                    <p>This experience reflects my ability to manage diverse project types, understand client needs, and
+                        deliver high-quality results with creativity and precision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
 
     <footer id="footer">
         <div class="container">
             <div class="footer-content">
-    
+
                 <div class="footer-section">
                     <h3>Hadeer Saad</h3>
                     <p>Interior & Landscape Designer</p>
                 </div>
-    
-         
-    
+
+
+
                 <div class="footer-section">
                     <h3>Contact Me</h3>
-    
+
                     <div class="social-links">
 
                         <!-- WhatsApp / Phone -->
                         <a href="https://wa.me/201100221352" class="social-link" title="WhatsApp">
                             <i class="fas fa-phone"></i>
                         </a>
-                    
+
                         <!-- Instagram -->
-                        <a href="https://www.instagram.com/hadeer_a_saad" target="_blank" class="social-link" title="Instagram">
+                        <a href="https://www.instagram.com/hadeer_a_saad" target="_blank" class="social-link"
+                            title="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                    
+
                         <!-- Facebook -->
-                        <a href="https://www.facebook.com/hadeerAsaadma" target="_blank" class="social-link" title="Facebook">
+                        <a href="https://www.facebook.com/hadeerAsaadma" target="_blank" class="social-link"
+                            title="Facebook">
                             <i class="fab fa-facebook"></i>
                         </a>
-                    
+
                         <!-- Email -->
                         <a href="mailto:Saadhadeer06@gmail.com" class="social-link" title="Email">
                             <i class="fas fa-envelope"></i>
                         </a>
-                    
+
                         <!-- Behance -->
-                        <a href="https://www.behance.net/saadhader5639" target="_blank" class="social-link" title="Behance">
+                        <a href="https://www.behance.net/saadhader5639" target="_blank" class="social-link"
+                            title="Behance">
                             <i class="fab fa-behance"></i>
                         </a>
-                    
+
                     </div>
-                    
+
                 </div>
-    
+
             </div>
-    
+
             <div class="footer-bottom">
                 <p>&copy; 2025 Hadeer Saad. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    
 
 
-    
+
+
 
 
     <!-- Modal for Image Viewing -->
@@ -1662,6 +1714,28 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
 
         // Gallery data and filtering
         const galleryData = {
+            'Bathroom': [
+                'WhatsApp Image 2025-12-10 at 9.26.37 AM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9.26.38 AM (1).jpeg',
+                'WhatsApp Image 2025-12-10 at 9.26.38 AM (2).jpeg',
+                'WhatsApp Image 2025-12-10 at 9.26.38 AM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9.26.39 AM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9.27.04 AM (1).jpeg',
+                'WhatsApp Image 2025-12-10 at 9.27.04 AM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9.27.05 AM (1).jpeg',
+                'WhatsApp Image 2025-12-10 at 9.27.05 AM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9.30.46 AM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9.31sdfsdf.06 AM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9.32.15 AM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9.32.16 AM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9.32.17 AM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9.32.1sdfsdf6 AM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9.32.50 AM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9.3adsfsf0.46 AM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9sdf.32.15 AM.jpeg',
+                'WhatsApp Imasdfsdfge 2025-12-10 at 9.32.17 AM.jpeg',
+                'WhatsApp Imsdfsfdage 2025-12-10 at 9.32.50 AM.jpeg'
+            ],
             'Bedroom': [
                 'WhatsApp Image 2025-12-09 at 4.14.20 PM (1).jpeg',
                 'WhatsApp Image 2025-12-09 at 4.14.22 PM (1).jpeg',
@@ -1669,7 +1743,9 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
                 'WhatsApp Image 2025-12-09 at 4.14.22 PM (3).jpeg',
                 'WhatsApp Image 2025-12-09 at 4.14.22 PM.jpeg',
                 'WhatsApp Image 2025-12-09 at 4.14.23 PM.jpeg',
-                'WhatsApp Image 2025-12-09 at 4.14.24 PM.jpeg'
+                'WhatsApp Image 2025-12-09 at 4.14.24 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.25 PM.jpeg',
+                'WhatsApp Image 2025-12-09 at 4.14.26 PM.jpeg'
             ],
             'Dining room': [
                 'WhatsApp Image 2025-12-09 at 4.01.28 PM.jpeg',
@@ -1680,11 +1756,13 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
                 'WhatsApp Image 2025-12-09 at 4.01.34 PM (2).jpeg',
                 'WhatsApp Image 2025-12-09 at 4.01.34 PM (3).jpeg',
                 'WhatsApp Image 2025-12-09 at 4.01.34 PM (4).jpeg',
-                'WhatsApp Image 2025-12-09 at 4.01.34 PM.jpeg',
-                'WhatsApp Image 2025-12-09 at 4.01.35 PM (1).jpeg',
-                'WhatsApp Image 2025-12-09 at 4.01.35 PM.jpeg'
+                'WhatsApp Image 2025-12-09 at 4.01.34 PM.jpeg'
             ],
             'Exterior': [
+                'WhasdfftsApp Image 2025-12-10 at 9.30.44 AM.jpeg',
+                'WhasdfsdfsdftsApp Image 2025-12-10 at 9.30.46 AM.jpeg',
+                'WhatsApp Imagdsfsdfsdfe 2025-12-10 at 9.30.44 AM.jpeg',
+                'WhatsApp Image-12-10 at 9.30.42 AM.jpeg',
                 'WhatsApp Image 2025-12-09 at 4.18.46 PM (1).jpeg',
                 'WhatsApp Image 2025-12-09 at 4.18.46 PM (2).jpeg',
                 'WhatsApp Image 2025-12-09 at 4.18.46 PM.jpeg',
@@ -1703,7 +1781,15 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
                 'WhatsApp Image 2025-12-09 at 4.23.09 PM (1).jpeg',
                 'WhatsApp Image 2025-12-09 at 4.23.09 PM.jpeg',
                 'WhatsApp Image 2025-12-09 at 4.23.10 PM (1).jpeg',
-                'WhatsApp Image 2025-12-09 at 4.23.10 PM.jpeg'
+                'WhatsApp Image 2025-12-09 at 4.23.10 PM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9.30.41 AM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9.30.42 AM.jpeg',
+                'WhatsApp Image 2025-12-10 at 9.30.sdf42 AM.jpeg',
+                'WhatsApp Image 2025-12-10 sdat 9.30.44 AM.jpeg',
+                'WhatsApp Image 20sdfsdf25-12-10 at 9.30.46 AM.jpeg',
+                'WhatsApp Imffffage 2025-12-10 at 9.30.44 AM.jpeg',
+                'WhatsApp Imsdfage 2025-12-10 at 9.30.43 AM.jpeg',
+                'WhatsdfsApp Image 2025-12-10 at 9.30.46 AM.jpeg'
             ],
             'Kitchen': [
                 'WhatsApp Image 2025-12-09 at 4.24.45 PM.jpeg',
@@ -1734,10 +1820,8 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
                 'WhatsApp Image 2025-12-09 at 4.14.24 PM (1).jpeg',
                 'WhatsApp Image 2025-12-09 at 4.14.24 PM (2).jpeg',
                 'WhatsApp Image 2025-12-09 at 4.14.24 PM (3).jpeg',
-                'WhatsApp Image 2025-12-09 at 4.14.25 PM.jpeg',
                 'WhatsApp Image 2025-12-09 at 4.14.26 PM (1).jpeg',
-                'WhatsApp Image 2025-12-09 at 4.14.26 PM (2).jpeg',
-                'WhatsApp Image 2025-12-09 at 4.14.26 PM.jpeg'
+                'WhatsApp Image 2025-12-09 at 4.14.26 PM (2).jpeg'
             ]
         };
 
@@ -1745,15 +1829,28 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
         const filterButtons = document.querySelectorAll('.filter-btn');
 
         const buildGalleryItems = (filter = 'all') => {
-            if (!copiesGrid) return;
+            if (!copiesGrid) {
+                console.error('Gallery grid not found');
+                return;
+            }
+
             copiesGrid.innerHTML = '';
 
             const items = [];
             Object.entries(galleryData).forEach(([category, files]) => {
+                if (!files || !Array.isArray(files)) {
+                    console.warn(`Invalid files for category: ${category}`);
+                    return;
+                }
                 files.forEach(file => items.push({ category, file }));
             });
 
             const filtered = filter === 'all' ? items : items.filter(item => item.category === filter);
+
+            if (filtered.length === 0) {
+                copiesGrid.innerHTML = '<p style="color: var(--text-color); text-align: center; padding: 40px;">No images found in this category.</p>';
+                return;
+            }
 
             filtered.forEach(({ category, file }) => {
                 const card = document.createElement('div');
@@ -1768,7 +1865,7 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
                     <div class="copy-overlay">
                         <i class="fas fa-eye"></i>
                     </div>
-                    <img src="${src}" alt="${category} - ${file}" class="copy-img">
+                    <img src="${src}" alt="${category} - ${file}" class="copy-img" loading="lazy">
                 `;
 
                 copiesGrid.appendChild(card);
@@ -1779,7 +1876,8 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
             btn.addEventListener('click', () => {
                 filterButtons.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                buildGalleryItems(btn.dataset.filter);
+                const filterValue = btn.dataset.filter;
+                buildGalleryItems(filterValue);
             });
         });
 
@@ -1791,7 +1889,7 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
         const closeBtn = document.querySelector('.modal-close');
 
         // Open modal on image click (delegated to handle dynamic items)
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             const item = e.target.closest('.copy-item, .certificate-item');
             if (!item) return;
             const img = item.querySelector('img');
@@ -1803,13 +1901,13 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
         });
 
         // Close modal when clicking the X button
-        closeBtn.addEventListener('click', function() {
+        closeBtn.addEventListener('click', function () {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto'; // Restore scrolling
         });
 
         // Close modal when clicking outside the image
-        modal.addEventListener('click', function(e) {
+        modal.addEventListener('click', function (e) {
             if (e.target === modal) {
                 modal.style.display = 'none';
                 document.body.style.overflow = 'auto'; // Restore scrolling
@@ -1817,7 +1915,7 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
         });
 
         // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && modal.style.display === 'block') {
                 modal.style.display = 'none';
                 document.body.style.overflow = 'auto'; // Restore scrolling
@@ -1825,4 +1923,5 @@ Throughout my career, I have completed 1000+ projects across Egypt and the Gulf 
         });
     </script>
 </body>
+
 </html>
